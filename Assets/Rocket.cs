@@ -118,12 +118,8 @@ public class Rocket : MonoBehaviour
 
     private void LoadSceneOnDead()
     {
-        SceneManager.LoadScene(0);
-    }
-
-    private void loseFuel()
-    {
-
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentScene);
     }
 
     private void RespondToThrustInput()
